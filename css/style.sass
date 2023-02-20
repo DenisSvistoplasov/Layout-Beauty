@@ -77,9 +77,10 @@ a
 body
   font-family: 'Roboto', sans-serif
   background-color: #FDFDFB
+  color: #1B1A17
 
 .container
-  max-width: 1266px
+  max-width: 1270px
   margin: 0 auto
   padding: 0 50px
 
@@ -111,7 +112,6 @@ body
   width: 13px
   height: 13px
   border-radius: 50%
-  color: #1B1A17
   font-size: 8px
   line-height: 13px
   text-align: center
@@ -138,13 +138,11 @@ body
   font-size: 45px
   line-height: 1
   font-weight: 400
-  color: #1B1A17
 .hero__subtitle
   margin-bottom: 35px
   font-family: 'PlayfairDisplay', serif
   font-size: 30px
   line-height: 1
-  color: #1B1A17
 .hero__description
   max-width: 262px
   margin-bottom: 60px
@@ -163,22 +161,80 @@ body
   background: url('../images/hero-watch.png') no-repeat right / auto 100%, url('../images/semisphere.svg') no-repeat left / auto 95.65%
 .hero-poduct__price
   position: absolute
-  // left: 114px
   left: 16.33%
   top: 157px
-  color: #1B1A17
   font-family: 'Prata', serif
   white-space: nowrap
 .hero-poduct__feature
   position: absolute
   right: -85px
   bottom: 135px
-  color: #1B1A17
   font-family: 'Prata', serif
   white-space: nowrap
 
 
 
+  //POPULAR
+.popular
+  position: relative
+  padding: 80px 0 86px
+  background-color: #fff
+.popular__title
+  margin-bottom: 50px
+  font-size: 32px
+  font-weight: 400
+  font-family: 'PlayfairDisplay', serif
+  text-align: center
+.popular__see-all
+  position: absolute
+  top: 115px
+  right: 98px
+  padding-bottom: 10px
+  border-bottom: 1px solid #C4C0B6
+  font-weight: 500
+  line-height: 1
+  color: #444240
+.popular__list
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr))
+  gap: 30px
+.popular__item
+  justify-self: center
+.popular-product
+  width: 370px
+  padding: 40px 28px
+  background-color: #FDFDFB
+.popular-product__title
+  margin-bottom: 10px
+  padding: 0 12px
+  font-family: 'PlayfairDisplay', serif
+  font-size: 14px
+  font-weight: 700
+  letter-spacing: 0.03em
+  color: rgba(27, 26, 23, 0.82)
+.popular-product__price
+  margin-bottom: 2px
+  padding: 0 12px
+  font-family: 'Prata', serif
+  font-size: 12px
+  color: rgba(27, 26, 23, 0.82)
+.popular-product__img
+  width: 100%
+  margin-bottom: 20px
+  aspect-ratio: 1
+  background: url('../images/popular-products/arc.svg') no-repeat center/cover
+.popular-product__details
+  margin-left: 60px
+  font-family: 'PlayfairDisplay', serif
+  &::before
+    width: 30px
+  
+
+
+
+
+
+// @MEDIA
 @media ( max-width: 1150px )
   .hero
     height: auto
@@ -194,7 +250,7 @@ body
     font-size: 14px
   .hero-poduct__price::before, .hero-poduct__feature::before
     width: 30px
-@media ( max-width: 850px )
+@media ( max-width: 875px )
   .container
     padding: 0 35px
   .header__container
@@ -221,6 +277,17 @@ body
   .hero-poduct__feature
     left: 90%
     right: unset
+
+  
+  .popular__title
+    margin-bottom: 70px
+  .popular__see-all
+    right: 50px
+    top: 135px
+  .popular__list
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  .popular-product
+    width: 300px
 
 @media ( max-width: 680px )
   .container
@@ -266,6 +333,13 @@ body
   .hero-poduct__price, .hero-poduct__feature
     display: none
 
+  .popular__see-all
+    right: 20px
+  .popular-product
+    width: 100%
+    max-width: 450px
+
+
 @media ( max-width: 400px )
   .container
     padding: 0 10px
@@ -279,3 +353,18 @@ body
     bottom: 15px
     height: 75%
     background-position:  right -10px center, left
+
+  .popular__container
+    padding: 0
+  .popular__title
+    padding: 0 10px
+    font-size: 30px
+  .popular__see-all
+    font-size: 15px
+  .popular__list
+    grid-template-columns: 100%
+    gap: 20px
+  .popular__item
+    width: 100%
+  .popular-product
+    width: 100%
