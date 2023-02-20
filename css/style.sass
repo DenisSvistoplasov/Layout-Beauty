@@ -58,13 +58,13 @@ a
   width: 50px
   height: 1px
   background-color: #8B8371
-.side-line.side-line_right::before
+.side-line_right::before
   right: unset
   left: calc(100% + 15px)
 
-
 .catalog-link
   display: block
+  width: fit-content
   padding: 26px 38px
   font-size: 12px
   line-height: 1
@@ -83,6 +83,7 @@ body
   margin: 0 auto
   padding: 0 50px
 
+  //HEADER
 .header
   padding: 28px 0
 .header__container
@@ -116,6 +117,7 @@ body
   text-align: center
   background-color: #E6C8B4
 
+  //HERO
 .hero
   position: relative
   height: calc( 100vh - 85px )
@@ -127,7 +129,9 @@ body
   align-items: flex-start
   height: 100%
   padding: 0 185px
-
+.hero__left
+  width: 100%
+  max-width: 45%
 .hero__title
   margin-bottom: 20px
   font-family: 'PlayfairDisplay', serif
@@ -159,19 +163,37 @@ body
   background: url('../images/hero-watch.png') no-repeat right / auto 100%, url('../images/semisphere.svg') no-repeat left / auto 95.65%
 .hero-poduct__price
   position: absolute
-  left: 114px
+  // left: 114px
+  left: 16.33%
   top: 157px
   color: #1B1A17
   font-family: 'Prata', serif
+  white-space: nowrap
 .hero-poduct__feature
   position: absolute
   right: -85px
   bottom: 135px
   color: #1B1A17
   font-family: 'Prata', serif
+  white-space: nowrap
 
 
 
+@media ( max-width: 1150px )
+  .hero
+    height: auto
+    aspect-ratio: 1366/768
+  .hero__container
+    padding: 0 130px
+  .hero-poduct__price
+    top: 15%
+    left: 20%
+    font-size: 14px
+  .hero-poduct__feature
+    bottom: 15%
+    font-size: 14px
+  .hero-poduct__price::before, .hero-poduct__feature::before
+    width: 30px
 @media ( max-width: 850px )
   .container
     padding: 0 35px
@@ -179,6 +201,26 @@ body
     gap: 45px
   .nav__list
     gap: 30px
+  
+  .hero
+    height: 0
+    min-height: 450px
+    aspect-ratio: unset
+    padding: 20px 0
+  .hero__container
+    padding: 0 70px
+  .hero__title::before
+    display: none
+  .hero-poduct
+    left: 56%
+  .hero-poduct__price
+    left: 90%
+    &::before
+      right: calc( 100% + 15px )
+      left: unset
+  .hero-poduct__feature
+    left: 90%
+    right: unset
 
 @media ( max-width: 680px )
   .container
@@ -198,8 +240,42 @@ body
   .controls
     gap: 30px
 
+  .hero
+    min-height: unset
+    height: auto
+  .hero__left
+    max-width: unset
+  .hero__title
+    font-size: 33px
+  .hero__subtitle
+    font-size: 24px
+  .hero__description
+    max-width: 55%
+    margin-bottom: 45px
+  .hero.catalog-link
+    
+  .hero__product
+    left: unset
+    right: 0
+    top: unset
+    bottom: 0
+    max-width: 60%
+    height: 88%
+    max-height: 90%
+    transform: none
+  .hero-poduct__price, .hero-poduct__feature
+    display: none
+
 @media ( max-width: 400px )
   .container
     padding: 0 10px
   .controls
     gap: 23px
+
+  .hero .catalog-link
+    padding: 20px 30px
+    font-size: 11px
+  .hero-poduct
+    bottom: 15px
+    height: 75%
+    background-position:  right -10px center, left
