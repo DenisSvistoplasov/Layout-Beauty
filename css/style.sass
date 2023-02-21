@@ -230,6 +230,72 @@ body
     width: 30px
   
 
+.quality
+  background: linear-gradient(90deg,  #F7F5EF 34.26%, transparent 34.26%), url('../images/lines_banner.svg') no-repeat right center / contain
+.quality__container
+  display: grid
+  grid-template-columns: 50% 50%
+.quality__slider
+  justify-self: end
+  align-self: start
+  padding: 52px 0
+  width: 100%
+  max-width: 521px
+  margin-right: 0
+.quality-slider__slide
+.quality-slider__img
+  display: block
+  width: 100%
+.quality-slider__nav
+  position: absolute
+  display: flex
+  gap: 33px
+  // right: 83px
+  right: 15.93%
+  bottom: 21px
+  height: 12px  
+.quality-slider__button
+  position: static
+  width: 7px
+  height: unset
+  margin: 0
+.swiper-pagination.quality-slider__pagination
+  position: absolute
+  left: 50%
+  top: 50%
+  bottom: unset
+  width: unset
+  font-size: 12px
+  line-height: 1
+  color: rgba(27, 26, 23, 0.82)
+  font-family: 'Prata', serif
+  white-space: nowrap
+  transform: translate(-50%, -50%)
+.quality-slider__button>svg
+  flex-shrink: 0
+.quality-slider__button::after
+  display: none
+
+.quality__description-block
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: flex-start
+  padding: 53px 70px
+.quality__title
+  margin-bottom: 35px
+  font-family: 'PlayfairDisplay', serif
+  font-weight: 400
+  font-size: 32px
+.quality__text
+  max-width: 380px
+  margin-bottom: 42px
+  color: #444240
+  line-height: 1.5
+.catalog-link_beige
+  background-color: #D4B098
+
+
 
 
 
@@ -250,6 +316,12 @@ body
     font-size: 14px
   .hero-poduct__price::before, .hero-poduct__feature::before
     width: 30px
+
+  .quality
+    background: none
+  .quality__description-block
+    padding: 53px 30px 53px 50px
+
 @media ( max-width: 875px )
   .container
     padding: 0 35px
@@ -288,6 +360,22 @@ body
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
   .popular-product
     width: 300px
+
+  .quality__container
+    display: flex
+    flex-direction: column-reverse
+  .quality-slider
+    max-width: unset
+  .quality-slider__nav
+    top: 21px
+    bottom: unset
+  .quality-slider__pagination
+    font-size: 14px
+  .quality__description-block
+    padding: 0
+  .quality__text
+    max-width: unset
+
 
 @media ( max-width: 680px )
   .container
@@ -339,6 +427,15 @@ body
     width: 100%
     max-width: 450px
 
+  .quality-slider__nav
+    top: 70px
+    right: 25px
+  .quality-slider__button
+    display: none
+  .swiper-pagination.quality-slider__pagination
+    position: static
+    transform: none
+
 
 @media ( max-width: 400px )
   .container
@@ -368,3 +465,8 @@ body
     width: 100%
   .popular-product
     width: 100%
+
+  .quality__container
+    padding: 0
+  .quality__description-block
+    padding: 0 10px
