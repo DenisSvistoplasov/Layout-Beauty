@@ -1,7 +1,8 @@
 (() => {
 
-  new Swiper('.quality-slider', {
+  const qualitySlider = new Swiper('.quality-slider', {
     loop: true,
+    autoHeight: false,
 
     // Navigation arrows
     navigation: {
